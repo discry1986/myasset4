@@ -1,0 +1,39 @@
+#server:
+#  port: 8443
+#  context-path: /myasset4
+#  ssl:
+#    key-password: 123456
+#    key-store: classpath:tomcat.keystore
+#    key-alias: tomcat
+#    key-store-type: JKS
+
+debug: false
+
+spring:
+  mvc:
+    favicon:
+      enabled: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/myasset4?characterEncoding=utf8&useSSL=true
+    username: root
+    password: root
+  #thymeleaf start
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
+  #thymeleaf end
+  jpa:
+    database: mysql
+    show-sql: true
+#Hibernate ddl auto (validate|create|create-drop|update)
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate: org.hibernate.dialect.MySQL5Dialect
+
