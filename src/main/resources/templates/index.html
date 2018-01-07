@@ -16,13 +16,13 @@
     <div class="panel-body">
         <div class="row">
             <div class="col-xs-6">
-                <form id="ptlistform" th:method="get" th:action="@{sys/ptlist}">
-                    <button type="submit">项目类型列表</button>
+                <form id="ptlistform" th:method="get" th:action="@{sys/ptManager}">
+                    <button class="btn btn-success" type="submit">基础数据-项目</button>
                 </form>
             </div>
             <div class="col-xs-6">
                 <form id="ptlistJsonform" th:method="post" th:action="@{sys/ptlistJson}">
-                    <button type="submit">项目类型列表Json</button>
+                    <button class="btn btn-success" type="submit">项目类型列表Json</button>
                 </form>
             </div>
         </div>
@@ -30,7 +30,7 @@
 </div>
 
 </body>
-<script type="text/javascript" th:src="@{jquery-3.2.1.min.js}"></script>
+<script type="text/javascript" th:src="@{bootstrap/jquery.min.js}"></script>
 <script th:src="@{bootstrap/js/bootstrap.min.js}"/>
 
 </html>

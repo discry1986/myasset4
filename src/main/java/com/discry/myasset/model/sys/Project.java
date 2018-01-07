@@ -16,8 +16,8 @@ public class Project implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @JsonBackReference
-    @ManyToOne
+//    @JsonBackReference
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "typeId")
     private ProjectType projectType;
     @Column(length = 20, nullable = false)

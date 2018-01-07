@@ -29,7 +29,7 @@ spring:
   jpa:
     database: mysql
     show-sql: true
-#Hibernate ddl auto (validate|create|create-drop|update)
+  #Hibernate ddl auto (validate|create|create-drop|update)
     hibernate:
       ddl-auto: update
       naming:

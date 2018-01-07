@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 @EnableTransactionManagement
@@ -43,6 +42,7 @@ public class ProjectTypeService {
      * 删除项目类型
      *
      */
+    @Transactional
     public void delProjectType(Long id){
         projectTypeRepository.delete(id);
     }

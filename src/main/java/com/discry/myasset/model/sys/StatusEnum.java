@@ -9,6 +9,10 @@ public enum StatusEnum {
 
     private String value;
 
+    public String getValue() {
+        return value;
+    }
+
     StatusEnum(String value) {
         this.value = value;
     }
